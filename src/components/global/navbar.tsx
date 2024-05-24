@@ -10,14 +10,14 @@ const Navbar = async (props: Props) => {
       <aside className="flex items-center gap-[2px]">
         <Image
           src="/Synco-logo.png"
-          width={40}
-          height={40}
+          width={50}
+          height={50}
           alt="Synco logo"
           className="shadow-sm"
         />
         <p className="text-2xl font-bold"> Synco </p>
       </aside>
-      <nav className="absolute left-[50%] transform translate-x-[-50%] hidden md:block">
+      <nav className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden md:block">
         <ul className="flex items-center gap-4 list-none">
           <li>
             <Link href="#">Products</Link>
