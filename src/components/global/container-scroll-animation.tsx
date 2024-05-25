@@ -83,7 +83,7 @@ export const Card = ({
       }}
       className="mx-auto -mt-12 h-[30rem] w-full max-w-5xl rounded-[30px] border-4 border-[#6C6C6C] bg-[#222222] p-6 shadow-2xl md:h-[40rem]"
     >
-      <div className="relative grid h-full w-full grid-cols-2 gap-4 overflow-hidden rounded-2xl bg-gray-100 p-4 md:grid-cols-4">
+      <div className="relative grid h-full w-full grid-cols-2 gap-4 overflow-hidden rounded-2xl p-4 md:grid-cols-4">
         <Image
           src="/temp-banner.png"
           fill
