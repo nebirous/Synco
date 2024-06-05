@@ -6,8 +6,8 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { id, email_addresses, first_name, image_url } = body?.data;
 
-    const email = email_addresses[0].email_addresses;
-    console.log('✅',body);
+    const email = email_addresses[0]?.email_address;
+    console.log("✅", body, email);
 
     await db.user.upsert({
       where: { clerkId: id },
