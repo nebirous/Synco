@@ -11,7 +11,7 @@ import { X } from "lucide-react";
 type Props = {
   userImage: string | null;
   onDelete?: any;
-  onUpload?: any;
+  onUpload: any;
 };
 
 const ProfilePicture = ({ userImage, onDelete, onUpload }: Props) => {
@@ -39,7 +39,7 @@ const ProfilePicture = ({ userImage, onDelete, onUpload }: Props) => {
             </Button>
           </>
         ) : (
-          <UploadCareButton />
+          <UploadCareButton onUpload={onUpload} />
         )}
       </div>
     </div>
