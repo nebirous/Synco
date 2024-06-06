@@ -11,15 +11,10 @@ type Props = {
 LR.registerBlocks(LR);
 
 const UploadCareButton = ({ onUpload }: Props) => {
-  const [isMounted, setIsMounted] = useState(false);
   const router = useRouter();
   const ctxProviderRef = useRef<
     typeof LR.UploadCtxProvider.prototype & LR.UploadCtxProvider
   >(null);
-
-  useEffect(() => {
-    setIsMounted(true);
-  });
 
   useEffect(() => {
     const handleUpload = async (e: any) => {
@@ -30,6 +25,7 @@ const UploadCareButton = ({ onUpload }: Props) => {
     };
 
     const currentRef = ctxProviderRef.current;
+    console.log(currentRef);
     if (currentRef) {
       console.log("Adding event listener");
       currentRef.addEventListener("file-upload-success", handleUpload);
@@ -42,8 +38,6 @@ const UploadCareButton = ({ onUpload }: Props) => {
       }
     };
   }, [onUpload, router]);
-
-  if (!isMounted) return null;
 
   return (
     <div>
