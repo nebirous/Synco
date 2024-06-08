@@ -16,7 +16,7 @@ type Props = {
   title: ConnectionTypes;
   description: string;
   callback?: () => void;
-  connected: {} & any;
+  connected?: {} & any;
 };
 
 const ConnectionCard = ({
