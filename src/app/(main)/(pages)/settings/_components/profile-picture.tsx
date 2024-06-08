@@ -38,7 +38,7 @@ const ProfilePicture = ({ userImage, onDelete, onUpload }: Props) => {
                 width="0"
                 height="0"
                 sizes="100vw"
-                className="flex h-full w-full flex-col rounded-full"
+                className="h-auto w-full rounded-full"
               />
             </div>
             <Button
