@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/card";
 import EditorCanvasIconHelper from "./editor-canvas-card-icon-helper";
 import { CONNECTIONS, EditorCanvasDefaultCardTypes } from "@/lib/constants";
-import { onConnections, onDragStart } from "@/lib/editor-utils";
+import { fetchBotSlackChannels, onConnections, onDragStart } from "@/lib/editor-utils";
 import {
   Accordion,
   AccordionContent,
@@ -38,6 +38,13 @@ const EditorCanvasSidebar = ({ nodes }: Props) => {
       onConnections(nodeConnection, state, googleFile);
     }
   }, [state]);
+
+  useEffect(() => {
+    if(nodeConnection.slackNode.slackAccessToken){
+      fetchBotSlackChannels(nodeConnection.slackNode.slackAccessToken, setSlackChannels)
+    }
+  }, [nodeConnection])
+
   return (
     <aside>
       <Tabs
