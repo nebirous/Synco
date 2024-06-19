@@ -26,5 +26,5 @@ Synco allows you to automate Google Drive folders, Notion entries and Discord an
   
 ##  Preview  
 
-<img src="public/preview1.jpg" height="300"> <img src="public/preview4.jpg" height="300"> <img src="public/preview2.jpg" height="300"> <img src="public/preview3.jpg" height="300">
+<img src="public/preview1.jpg" height="200"> <img src="public/preview4.jpg" height="200"> <img src="public/preview2.jpg" height="200"> <img src="public/preview3.jpg" height="200">
 
