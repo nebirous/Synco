@@ -1,10 +1,11 @@
 
 #  Synco, a SaaS automation platform
 
-Synco is an automation platform thought as a Software as a Service. Similar to other apps on the internet such as IFTT and Zappier.
+Synco is a Software as a Service automation platform build with Nextjs. Similar to other apps on the internet such as IFTT and Zappier.
 
 Synco allows you to automate Google Drive folders, Notion entries and Discord and Slack messages in a simple and stilish way.
 ## Functionalities
+- ▲ Next.js
 - 📄Functioning landing page
 - 👨Clerk authentication
 - ⭐Tailwind
