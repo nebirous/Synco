@@ -158,3 +158,4 @@ export const fetchBotSlackChannels = async (
 ) => {
   await listBotChannels(token)?.then((channels) => setSlackChannels(channels));
 };
+

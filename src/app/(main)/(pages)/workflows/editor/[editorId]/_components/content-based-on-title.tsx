@@ -1,8 +1,8 @@
+import { AccordionContent } from "@/components/ui/accordion";
 import { ConnectionProviderProps } from "@/providers/connections-provider";
 import { EditorState } from "@/providers/editor-provider";
-import React, { useEffect } from "react";
 import { nodeMapper } from "@/lib/types";
-import { AccordionContent } from "@/components/ui/accordion";
+import React, { useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -11,12 +11,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import GoogleFileDetails from "./google-file-detail";
 import { onContentChange } from "@/lib/editor-utils";
+import GoogleFileDetails from "./google-file-detail";
 import GoogleDriveFiles from "./google-drive-files";
 import ActionButton from "./action-button";
-import { toast } from "sonner";
+import { getFileMetaData } from "@/app/(main)/(pages)/connections/_actions/google-connection";
 import axios from "axios";
+import { toast } from "sonner";
 
 export interface Option {
   value: string;
@@ -66,7 +67,7 @@ const ContentBasedOnTitle = ({
     reqGoogle();
   }, []);
 
-  //@ts-ignore
+  // @ts-ignore
   const nodeConnectionType: any = nodeConnection[nodeMapper[title]];
   if (!nodeConnectionType) return <p>Not connected</p>;
 
