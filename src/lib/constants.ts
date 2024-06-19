@@ -99,8 +99,6 @@ export const menuOptions = [
   { name: "Settings", Component: Settings, href: "/settings" },
   { name: "Connections", Component: Category, href: "/connections" },
   { name: "Billing", Component: Payment, href: "/billing" },
-  { name: "Templates", Component: Templates, href: "/templates" },
-  { name: "Logs", Component: Logs, href: "/logs" },
 ];
 
 export const CONNECTIONS: Connection[] = [
